@@ -10,10 +10,20 @@
 	<div id="in"></div>
 	<script>
 	$(document).keyrepeat(function(e){
-		$("#in").append(" " + e.which + " ");
-	},{
-		delay:100,
-		interval: 20
+	    // Your code
+	    $("#in").append(" " + e.which + " ");
+	}, {
+	    delay: function(e, count, options){
+	        // e - original jQuery keydown event
+	        // count - the number of times keyrepeat has been called
+	        // options - the options passed to keyrepeat
+	        return 10; // Return any millisecond value
+	    }, interval: function(e, count){
+	        // This one gets faster!
+	        // Remember, the smaller the value returned, the faster
+	        // keyrepeat is fired.
+	        return Math.max(5, Math.floor(100/count));
+	    } 
 	});
 	</script>
 </body>

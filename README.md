@@ -9,11 +9,31 @@ Keyboard input autorepeat happens when you press a key and hold it for a certain
 $(document).keyrepeat(function(e){
   // Some logic
 }, {
-  delay: 100, // milliseconds
-  interval: 10 // milliseconds
+  delay: 100, // milliseconds - time before first repeat
+  interval: 10 // milliseconds - time between repeats
 });
 ```
 
+## Function Example
+
+In addition to specifying constants for the *delay* and *interval* values, you can also provide functions that return dynamic values:
+
+```javascript
+$(document).keyrepeat(function(e){
+    // Your code
+}, {
+    delay: function(e, count, options){
+        // e - original jQuery keydown event
+        // count - the number of times keyrepeat has been called
+        // options - the options passed to keyrepeat
+        return 10; // Return any millisecond value
+    }, interval: function(e, count){
+        // This one gets faster!
+        // Remember, the smaller the value returned, the faster keyrepeat is fired.
+        return Math.max(5, Math.floor(100/count));
+    } 
+})
+```
 
 ## License
 
