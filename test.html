@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Key Repeat Test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="./src/keyrepeat.js"></script>
+</head>
+<body>
+	<div id="in"></div>
+	<script>
+	$(document).keyrepeat(function(e){
+		$("#in").append(" " + e.which + " ");
+	},{
+		delay:100,
+		interval: 20
+	});
+	</script>
+</body>
+</html>
