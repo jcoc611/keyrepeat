@@ -1,0 +1,28 @@
+{
+  "name": "jquery-keyrepeat",
+  "homepage": "https://github.com/jcoc611/keyrepeat",
+  "authors": [
+    "Juan Camilo Osorio <jcoc611@gmail.com>"
+  ],
+  "description": "Advanced key auto-repeat plugin for jQuery.",
+  "main": "src/keyrepeat.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jquery",
+    "autorepeat",
+    "keyrepeat",
+    "das",
+    "keyboard",
+    "jcoc611"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
