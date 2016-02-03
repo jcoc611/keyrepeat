@@ -3,6 +3,12 @@ Keyboard input autorepeat happens when you press a key and hold it for a certain
 
 `keyrepeat` behaves like a `keydown` event, but is triggered after a *delay*, every *interval* time repeatedly.
 
+## Installation
+You can easily install this plugin with:
+```bash
+bower install jquery-keyrepeat
+```
+
 ## Simple Example
 
 ```javascript
